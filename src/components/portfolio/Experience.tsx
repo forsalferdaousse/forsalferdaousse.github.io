@@ -108,7 +108,7 @@ export const Experience = () => {
                     </div>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 bg-background">
+                <AccordionContent className="px-6 py-6 bg-background">
                   <div className="pl-0 sm:pl-16 space-y-4">
                     <ul className="space-y-2.5 text-muted-foreground text-[15px] leading-relaxed">
                       {job.bullets.map((b, idx) => (

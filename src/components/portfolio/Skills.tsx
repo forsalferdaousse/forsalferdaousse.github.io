@@ -68,7 +68,7 @@ export const Skills = () => {
         />
 
         {/* Top skills with progress bars */}
-        <div className="skills-top grid grid-cols-5 gap-4 mb-11">
+        <div className="skills-top grid grid-cols-1 md:grid-cols-5 gap-4 mb-11">
           {topSkills.map((s, i) => (
             <Reveal key={s.name} delay={i * 80}>
               <div>

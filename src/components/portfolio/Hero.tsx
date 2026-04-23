@@ -9,7 +9,7 @@ export const Hero = () => {
     <section id="top" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
 
-      <div className="container-tight relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+      <div className="container-tight relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-7">
           <Reveal>
             <Badge
@@ -37,7 +37,7 @@ export const Hero = () => {
           </Reveal>
 
           <Reveal delay={240}>
-            <p className="text-base text-foreground max-w-2xl leading-relaxed mb-5">
+            <p className="text-base text-foreground max-w-2xl font-bold leading-relaxed mb-5">
               Full Stack Developer specialized in Laravel, React, and secure REST APIs turning business problems into reliable, production-grade software.
             </p>
 

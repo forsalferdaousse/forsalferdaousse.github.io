@@ -56,7 +56,6 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
       <div className="container-tight relative">
         <SectionHeading
           number="06. contact"
@@ -64,7 +63,7 @@ export const Contact = () => {
           subtitle="Open to full-time roles and freelance projects worldwide. I usually reply within 24 hours."
         />
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact info */}
           <Reveal>
             <div className="flex flex-col gap-4">
@@ -97,7 +96,7 @@ export const Contact = () => {
 
           {/* Form */}
           <Reveal delay={120}>
-            <form onSubmit={onSubmit} className="flex flex-col gap-4 bg-secondary p-10 rounded-lg">
+            <form onSubmit={onSubmit} className="flex flex-col gap-4 bg-secondary p-5 md:p-10 rounded-lg">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name" className="font-mono text-xs text-muted-foreground">
