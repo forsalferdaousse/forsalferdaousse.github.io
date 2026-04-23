@@ -10,7 +10,8 @@
    ============================================================ */
 
 @layer base {
-  :root {
+  :root, 
+  .dark {
     /* Deep dev background — near-black with cool blue undertone */
     --background: 222 30% 6%;
     --foreground: 210 25% 96%;
@@ -67,6 +68,60 @@
     --sidebar-accent-foreground: 210 25% 96%;
     --sidebar-border: 222 20% 16%;
     --sidebar-ring: 168.11deg 100% 41.57%;
+  }
+
+  .light {
+    /* Clean, paper-like background with soft cool undertone */
+    --background: 210 40% 98%;
+    --foreground: 222 30% 12%;
+
+    --card: 0deg 0% 100% / 0%;
+    --card-foreground: 222 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 12%;
+
+    /* Slightly deeper green for AA contrast on light bg */
+    --primary: 158 78% 36%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 158 80% 48%;
+
+    --secondary: 222 18% 94%;
+    --secondary-foreground: 222 30% 12%;
+
+    --muted: 222 18% 94%;
+    --muted-foreground: 0deg 0% 0% / 74%;
+
+    --accent: 200 90% 42%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 20% 88%;
+    --input: 222 20% 90%;
+    --ring: 158 78% 36%;
+
+    --code: 280 60% 45%;
+    --warning: 38 92% 48%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(158 78% 36%), hsl(200 90% 42%));
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(158 78% 36% / 0.12), transparent 60%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(222 20% 96%));
+    --gradient-text: linear-gradient(135deg, hsl(222 30% 12%), hsl(158 78% 36%));
+
+    --shadow-glow: 0 0 40px hsl(158 78% 36% / 0.18);
+    --shadow-card: 0 8px 30px -12px hsl(222 30% 30% / 0.15);
+    --shadow-elevated: 0 20px 60px -20px hsl(158 78% 36% / 0.25);
+
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 222 30% 12%;
+    --sidebar-primary: 158 78% 36%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 222 18% 94%;
+    --sidebar-accent-foreground: 222 30% 12%;
+    --sidebar-border: 222 20% 88%;
+    --sidebar-ring: 158 78% 36%;
   }
 }
 

@@ -36,7 +36,7 @@ export const About = () => {
             </p>
           </Reveal>
 
-          <Reveal delay={120} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Reveal delay={120} className="lg:col-span-5 md: grid grid-cols-1 md:grid-cols-2 gap-4">
             {stats.map((s) => (
               <Card key={s.label} className="glow-card border-border/60 rounded-xl bg-border hover:bg-gradient-primary p-px h-full">
                 <CardContent className="p-5 bg-background rounded-xl">

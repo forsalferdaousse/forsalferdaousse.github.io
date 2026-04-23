@@ -59,7 +59,7 @@ export const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="font-mono border-primary/40"
+                className="font-mono border-primary/40 hover:text-white"
                 onClick={() =>
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                 }

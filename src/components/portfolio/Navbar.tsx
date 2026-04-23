@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Code2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
 
 const sections = [
   { id: "about", label: "about", num: "01" },
@@ -85,7 +86,8 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-2">
+          <ThemeToggle />
           <Button
             size="sm"
             variant="outline"
@@ -97,12 +99,14 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile */}
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" aria-label="Open menu">
-              <Menu className="w-5 h-5" />
-            </Button>
-          </SheetTrigger>
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle />
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Open menu">
+                <Menu className="w-5 h-5" />
+              </Button>
+            </SheetTrigger>
           <SheetContent side="right" className="bg-background border-border w-[280px]">
             <div className="mt-10 flex flex-col gap-2">
               {sections.map((s) => (
@@ -123,7 +127,8 @@ export const Navbar = () => {
               </Button>
             </div>
           </SheetContent>
-        </Sheet>
+          </Sheet>
+        </div>
       </nav>
     </header>
   );
