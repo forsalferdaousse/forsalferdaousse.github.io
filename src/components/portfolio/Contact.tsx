@@ -54,7 +54,7 @@ export const Contact = () => {
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
 
-    const res = await fetch("https://forsalferdaousse.github.io/api/contact", {
+    const res = await fetch("/.netlify/functions/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
