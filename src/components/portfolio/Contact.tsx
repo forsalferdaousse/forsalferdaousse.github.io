@@ -42,16 +42,35 @@ const contactLinks = [
 export const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
+
+    const form = e.target as HTMLFormElement;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    const res = await fetch("https://forsalferdaousse.github.io/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    setSubmitting(false);
+
+    if (res.ok) {
+      form.reset();
       toast.success("Message sent", {
         description: "Thanks — I'll get back to you within 24 hours.",
       });
-    }, 900);
+    } else {
+      const { error } = await res.json();
+      toast.error("Failed to send", { description: error || "Please try again." });
+    }
   };
 
   return (
